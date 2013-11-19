@@ -34,9 +34,6 @@ public class RepositoryIntegrationTest {
   
   @Autowired
   PostRepository postRepository;
-  
-  @Autowired
-  WallRepository wallRepository;
 
   @Test
   public void createUser() throws Exception {
@@ -97,12 +94,6 @@ public class RepositoryIntegrationTest {
     for(Post postI : posts) {
     	assertEquals(postI.getBody(),testBody);
     }
-  }
-  
-  @Test
-  public void createWall() throws Exception {
-
-    Wall wall = new Wall();
   }
 
 }
