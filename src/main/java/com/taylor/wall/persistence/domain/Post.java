@@ -13,6 +13,8 @@ public class Post {
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	private User user;
+	
+	@Column(columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	private Date created;
 	
 	@Column(columnDefinition="TEXT")

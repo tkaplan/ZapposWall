@@ -9,6 +9,7 @@ public class User {
 	private Date created;
 	private String email;
 	private String username;
+	private String password;
 	
 	public void setId(Long id) {
 		this.id = id;
@@ -39,5 +40,12 @@ public class User {
 	}
 	public String getUsername() {
 		return username;
+	}
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }
