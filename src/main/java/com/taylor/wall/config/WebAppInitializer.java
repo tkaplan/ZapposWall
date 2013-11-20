@@ -10,7 +10,7 @@ public class WebAppInitializer extends
 
   @Override
   protected Class<?>[] getServletConfigClasses() {
-    return new Class<?>[] { WebConfiguration.class };
+    return new Class<?>[] { JPAConfiguration.class ,RESTConfiguration.class ,WebConfiguration.class };
   }
 
   @Override

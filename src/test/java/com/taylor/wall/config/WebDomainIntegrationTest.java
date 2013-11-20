@@ -3,7 +3,6 @@ package com.taylor.wall.config;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.hamcrest.Matchers.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +18,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(classes = {JPAConfiguration.class,RESTConfiguration.class,RestExporterWebInitializer.class,WebConfiguration.class} )
+@ContextConfiguration(classes = {JPAConfiguration.class,RESTConfiguration.class,WebConfiguration.class} )
 public class WebDomainIntegrationTest {
 	private MockMvc mockMvc;
 
@@ -36,10 +35,10 @@ public class WebDomainIntegrationTest {
 		
 		// Check that we can get home page
 		mockMvc.perform(get("/"))
-			   .andExpect(status.isOk());
+			   .andExpect(status().isOk());
 
 		// Check that mapping works
 		mockMvc.perform(get("/login/"))
-			   .andExpect(status.isOk());
+			   .andExpect(status().isOk());
 	}
 }
