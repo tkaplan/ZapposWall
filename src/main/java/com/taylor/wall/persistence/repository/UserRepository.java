@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 
-	@Query("SELECT u.* FROM User u WHERE u.email = :email LIMIT 1")
+	@Query(value = "select u.* from User u where u.email = :email", nativeQuery = true)
 	User findByEmail(@Param("email") String email);
 }

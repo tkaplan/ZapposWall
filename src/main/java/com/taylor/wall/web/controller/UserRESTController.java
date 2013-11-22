@@ -28,11 +28,13 @@ public class UserRESTController {
 		com.taylor.wall.persistence.domain.User userPersist = new com.taylor.wall.persistence.domain.User();
 		
 		if(user.getEmail().isEmpty() || user.getEmail() == null) {
-			return "/signup/error/"; 
+			// Create an error
+			return "home"; 
 		}
 		
 		if(user.getUsername().isEmpty() || user.getUsername() == null) {
-			return "/signup/error/";
+			// Create an error
+			return "home";
 		}
 		
 		userPersist.setEmail(user.getEmail());
@@ -45,7 +47,7 @@ public class UserRESTController {
 		session.setAttribute("ROLE", "USER");
 		session.setAttribute("USER_ID", user.getId());
 		
-		return "/home/";
+		return "home";
 	}
 	
 	// Read User

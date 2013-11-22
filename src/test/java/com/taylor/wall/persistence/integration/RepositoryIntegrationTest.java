@@ -43,7 +43,7 @@ public class RepositoryIntegrationTest {
     user.setEmail("taylor@yahoo.com");
     
     userRepository.save(user);
-    User user2 = userRepository.findOne(new Long(1));
+    User user2 = userRepository.findByEmail("taylor@yahoo.com");
     
     // This shows that I can save and retrieve users from a database
     assertNotNull(user2);

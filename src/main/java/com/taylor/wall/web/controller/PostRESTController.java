@@ -48,7 +48,7 @@ public class PostRESTController {
 		postRepository.save(postPersistence);
 		userRepository.save(user);
 		// Return a 200
-		return "/home/";
+		return "home";
 	}
 	
 	// Read All Post

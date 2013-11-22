@@ -1,7 +1,6 @@
 package com.taylor.wall.config;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.junit.Before;
@@ -18,7 +17,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(classes = {JPAConfiguration.class,RESTConfiguration.class,WebConfiguration.class} )
+@ContextConfiguration(classes = {JPAConfiguration.class,RESTConfiguration.class, WebConfiguration.class} )
 public class WebDomainIntegrationTest {
 	private MockMvc mockMvc;
 

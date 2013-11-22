@@ -23,8 +23,8 @@ public class SecurityController {
 	private HttpServletRequest request;
 	
 	// Login User
-	@RequestMapping(value="/security/login/", method=RequestMethod.POST )
-	public String login(@ModelAttribute User user, Model model) {
+	@RequestMapping(value="security/login/submit", method=RequestMethod.POST )
+	public String loginSubmit(@ModelAttribute User user, Model model) {
 		HttpSession session = request.getSession();
 		com.taylor.wall.persistence.domain.User userPersistence = userRepository.findByEmail(user.getEmail());
 		
@@ -33,13 +33,7 @@ public class SecurityController {
 			session.setAttribute("USER_ID",userPersistence.getId());
 			session.setAttribute("ROLE","USER");
 		}
-		return "/";
-	}
-
-	// Login User
-	@RequestMapping(value="/security/login/", method=RequestMethod.GET )
-	public String login(@ModelAttribute User user, Model model) {
-		return "/login/";
+		return "home";
 	}
 	
 	@RequestMapping(value="/security/logout/", method=RequestMethod.GET )
@@ -47,6 +41,6 @@ public class SecurityController {
 		// Remove session attribute
 		HttpSession session = request.getSession();
 		session.setAttribute("ROLE", "ANON");
-		return "/home/";
+		return "home";
 	}
 }

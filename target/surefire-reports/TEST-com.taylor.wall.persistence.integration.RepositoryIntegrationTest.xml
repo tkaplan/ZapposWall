@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="4.824" errors="0" skipped="0" tests="3" name="com.taylor.wall.persistence.integration.RepositoryIntegrationTest">
+<testsuite failures="0" time="2.086" errors="0" skipped="0" tests="2" name="com.taylor.wall.persistence.integration.RepositoryIntegrationTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/dev/jdk1.7.0_45/jre/lib/amd64"/>
@@ -24,7 +24,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/dev/SpringWorkspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf2148813500992758863.tmp"/>
+    <property name="classworlds.conf" value="/home/dev/SpringWorkspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf192946936955825779.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,7 +60,6 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="4.289" classname="com.taylor.wall.persistence.integration.RepositoryIntegrationTest" name="createUser"/>
-  <testcase time="0.239" classname="com.taylor.wall.persistence.integration.RepositoryIntegrationTest" name="createPost"/>
-  <testcase time="0.004" classname="com.taylor.wall.persistence.integration.RepositoryIntegrationTest" name="createWall"/>
+  <testcase time="0.499" classname="com.taylor.wall.persistence.integration.RepositoryIntegrationTest" name="createPost"/>
+  <testcase time="1.587" classname="com.taylor.wall.persistence.integration.RepositoryIntegrationTest" name="createUser"/>
 </testsuite>

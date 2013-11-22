@@ -26,7 +26,6 @@ public class MappingIntegrationTest {
   public void thatItemCustomMappingWorks() throws Exception {
     assertTableExists(manager, "POST");
     assertTableExists(manager, "USER");
-    assertTableExists(manager, "WALL");
   }
 
 }

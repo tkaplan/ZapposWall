@@ -5,12 +5,12 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import javax.servlet.Filter;
 
-public class WebAppInitializer extends
-    AbstractAnnotationConfigDispatcherServletInitializer {
+public class WebAppInitializer extends 
+		AbstractAnnotationConfigDispatcherServletInitializer {
 
   @Override
   protected Class<?>[] getServletConfigClasses() {
-    return new Class<?>[] { JPAConfiguration.class ,RESTConfiguration.class ,WebConfiguration.class };
+    return new Class<?>[] { WebConfiguration.class };
   }
 
   @Override
@@ -25,4 +25,10 @@ public class WebAppInitializer extends
     characterEncodingFilter.setEncoding("UTF-8");
     return new Filter[] { characterEncodingFilter};
   }
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		// TODO Auto-generated method stub
+		return new Class<?>[] { JPAConfiguration.class ,RESTConfiguration.class };
+	}
 }

@@ -14,7 +14,7 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		
 		// Get All User Posts
-		return "/";
+		return "home";
 	}
 
 }
